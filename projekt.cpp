@@ -5,4 +5,5 @@ int main()
 {
   cout << "dupa";
   cout << "twoja stara";
+  cout << "parowa";
 }
