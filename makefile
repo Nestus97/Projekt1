@@ -1,4 +1,10 @@
 all: projekt
 
-projekt: projekt.cpp
-	g++ -o projekt projekt.cpp
+debug: CXXFLAGS += -DDEBUG -g
+debug: projekt
+
+projekt: projekt.o
+	g++ $(CXXFLAGS) -o projekt projekt.o
+
+projekt.o: projekt.cpp
+	g++ $(CXXFLAGS) -c projekt.cpp
